@@ -167,6 +167,19 @@ describe("Assert Test", () => {
         );
       }
     });
+
+    it("Assert Before 0x32", async () => {
+      try {
+        await assertBefore.assert0x32();
+
+        console.log("success");
+      } catch (error: any) {
+        console.log(
+          "assert 0x32 error data:",
+          decodeAssertErrorData(error.data)
+        );
+      }
+    });
   });
 
   describe("Assert >= 0.8", () => {
@@ -256,6 +269,19 @@ describe("Assert Test", () => {
       } catch (error: any) {
         console.log(
           "assert 0x31 error data:",
+          decodeAssertErrorData(error.data)
+        );
+      }
+    });
+
+    it("Assert 0x32", async () => {
+      try {
+        await assert.assert0x32();
+
+        console.log("success");
+      } catch (error: any) {
+        console.log(
+          "assert 0x32 error data:",
           decodeAssertErrorData(error.data)
         );
       }
