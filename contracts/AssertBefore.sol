@@ -34,7 +34,7 @@ contract AssertBefore {
 
     function assert0x31() external {
         array.pop();
-    } 
+    }
 
     function assert0x32() external view {
         array[5];
@@ -43,7 +43,7 @@ contract AssertBefore {
     function assertRevertOpcode() external pure {
         // 0x4e487b71
         bytes4 panicId = bytes4(keccak256(bytes("Panic(uint256)")));
-     
+
         assembly {
             mstore(0x00, panicId)
             mstore(add(0x00, 4), 0x1)
