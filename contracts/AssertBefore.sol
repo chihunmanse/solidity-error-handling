@@ -6,11 +6,11 @@ contract AssertBefore {
         assert(false);
     }
 
-    function assert0x11() external pure {
+    function assert0x11() external pure returns (uint256) {
         uint256 a = 5;
         uint256 b = 10;
 
-        a - b;
+        return a - b;
     }
 
     function assert0x12() external pure {

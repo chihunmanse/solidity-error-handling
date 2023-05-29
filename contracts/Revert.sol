@@ -21,7 +21,7 @@ contract Revert {
     function revertByYul() external {
         // 0x08c379a0
         bytes4 errorSelector = bytes4(keccak256(bytes("Error(string)")));
-     
+
         assembly {
             mstore(0x00, errorSelector)
             mstore(add(0x00, 4), 32) // data offset

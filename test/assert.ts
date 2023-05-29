@@ -118,9 +118,9 @@ describe("Assert Test", () => {
 
     it("Assert Before 0x11", async () => {
       try {
-        await assertBefore.assert0x11();
+        const result = await assertBefore.assert0x11();
 
-        console.log("success");
+        console.log("success", result);
       } catch (error: any) {
         console.log(
           "assert 0x11 error data:",
@@ -224,9 +224,9 @@ describe("Assert Test", () => {
 
     it("Assert 0x11", async () => {
       try {
-        await assert.assert0x11();
+        const result = await assert.assert0x11();
 
-        console.log("success");
+        console.log("success", result);
       } catch (error: any) {
         console.log(
           "assert 0x11 error data:",

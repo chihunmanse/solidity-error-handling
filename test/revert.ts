@@ -1,7 +1,7 @@
 /** @format */
 import { Contract } from "ethers";
 import { defaultAbiCoder } from "ethers/lib/utils";
-import { ethers, expect } from "hardhat";
+import { ethers } from "hardhat";
 
 // method id of 'Error(string)'
 const ERROR_STRING_PREFIX = "0x08c379a0";
