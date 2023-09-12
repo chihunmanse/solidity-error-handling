@@ -13,3 +13,5 @@ artifacts
 # Foundry
 cache_forge
 out
+
+.idea
