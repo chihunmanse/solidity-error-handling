@@ -59,17 +59,4 @@ contract RevertTest is Test {
         vm.expectRevert(abi.encodeWithSelector(CustomErrorWithParameter.selector, 1));
         reverter.revertCustomErrorWithParameterByYul();
     }
-
-
-
-
-    // function revertCustomErrorWithParameterByYul() external {
-    //     bytes4 errorSelector = CustomErrorWithParameter.selector;
-
-    //     assembly {
-    //         mstore(0x00, errorSelector)
-    //         mstore(add(0x00, 4), 1) // param uint256 value 1 padded to 32 bytes
-    //         revert(0x00, 36)
-    //     }
-    // }
 }

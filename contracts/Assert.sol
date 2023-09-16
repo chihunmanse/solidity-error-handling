@@ -45,9 +45,9 @@ contract Assert {
         bytes4 panicId = bytes4(keccak256(bytes("Panic(uint256)")));
 
         assembly {
-            mstore(0x00, panicId)
-            mstore(add(0x00, 4), 0x1)
-            revert(0x00, 36)
+            mstore(0x40, panicId)
+            mstore(add(0x40, 4), 0x1)
+            revert(0x40, 36)
         }
     }
 
